@@ -414,7 +414,7 @@
     <div class="section-tag reveal">Photo</div>
     <h2 class="section-title reveal">Shot by Hunter</h2>
     <p class="work-lead reveal" style="margin:0 0 40px;text-align:left;">Game action, portraits, and brand shoots across all 17 FIU programs — and beyond.</p>
-    <div class="photo-masonry reveal">
+    <div class="photo-masonry">
       <img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/679439c25954e17e0a7033f9/e669a39d-9582-495a-bd4f-724d8bb48986/DSC08248.jpg?format=800w" alt="FIU Athletics photography by Hunter DuBois">
       <img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/679439c25954e17e0a7033f9/b4909a0d-115b-4ac9-8a60-2f84fd7d4c58/cube_pix__382.jpg?format=800w" alt="FIU Athletics photography by Hunter DuBois">
       <img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/679439c25954e17e0a7033f9/e2954e21-3e17-4e45-a8ef-d21cfbb69954/DSC08436_Enhanced_NR.jpg?format=800w" alt="FIU Athletics photography by Hunter DuBois">
@@ -519,7 +519,7 @@
         io.unobserve(e.target);
       }
     });
-  }, {threshold:0.15});
+  }, {threshold:0.05, rootMargin:'150px 0px 150px 0px'});
   revealEls.forEach(el => io.observe(el));
 </script>
 
