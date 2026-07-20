@@ -62,18 +62,20 @@
   .hero::before{
     content:"";position:absolute;inset:0;
     background:
-      linear-gradient(rgba(10,13,20,0.82), rgba(10,13,20,0.94)),
-      url('https://images.squarespace-cdn.com/content/v1/679439c25954e17e0a7033f9/1f80d723-6993-4d3b-b11f-0c0e0b0405c9/Untitled-1.png?format=1500w') center/cover no-repeat;
-    pointer-events:none;
-  }
-  .hero::after{
-    content:"";position:absolute;inset:0;
-    background:
       radial-gradient(circle at 20% 20%, rgba(47,224,255,0.12), transparent 45%),
       radial-gradient(circle at 80% 70%, rgba(255,47,126,0.12), transparent 45%);
     pointer-events:none;
   }
   .hero > *{position:relative;z-index:1;}
+  .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;}
+  .hero-imgs{display:grid;gap:18px;}
+  .hero-imgs img{width:100%;display:block;border-radius:10px;border:1px solid var(--line);}
+  .hero-imgs .headshot{max-width:380px;justify-self:center;transform:rotate(1.5deg);}
+  .hero-imgs .team{transform:rotate(-1deg);}
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:40px;}
+    .hero-imgs .headshot{justify-self:start;max-width:260px;}
+  }
   .eyebrow{
     font-size:0.85rem;font-weight:700;letter-spacing:3px;color:var(--cyan);
     text-transform:uppercase;margin-bottom:18px;
@@ -255,12 +257,21 @@
 </nav>
 
 <section class="hero container">
-  <div class="eyebrow">Miami, FL</div>
-  <h1>Creative. <span>Storyteller.</span><br>Leader.</h1>
-  <p class="role-line">One creative, <strong>every discipline</strong> — photo, video, social strategy, and graphic design — plus the leadership to build a department that produces at scale.</p>
-  <div class="btn-row">
-    <a href="#video" class="btn btn-primary">See the Work</a>
-    <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">Miami, FL</div>
+      <h1>Creative. <span>Storyteller.</span><br>Leader.</h1>
+      <p class="role-line">A creative expert passionate about <strong>building brands</strong> and the teams that power them.</p>
+      <div class="btn-row">
+        <a href="#video" class="btn btn-primary">See the Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-imgs">
+      <img class="headshot" src="headshot.jpg" alt="Hunter DuBois">
+      <!-- TEAM PHOTO: restore when team.jpg is added
+      <img class="team" src="team.jpg" alt="The FIU creative team with the Don Shula Award trophy"> -->
+    </div>
   </div>
   <div class="scroll-cue">Scroll ↓</div>
 </section>
