@@ -3,328 +3,274 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hunter DuBois — Creative Director</title>
+<title>Hunter DuBois | Creative Director</title>
+<meta name="description" content="Hunter DuBois, creative director and storyteller. Took FIU Football's Instagram from 12K to 66K followers.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0a0d14;
-    --bg-alt:#0f1420;
-    --ink:#f4f6fa;
-    --muted:#9aa3b5;
-    --cyan:#2fe0ff;
-    --magenta:#ff2f7e;
-    --gold:#ffb238;
-    --line:rgba(255,255,255,0.08);
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-    line-height:1.6;
-    overflow-x:hidden;
-  }
-  h1,h2,h3,.display{
-    font-family:'Anton',Impact,sans-serif;
-    letter-spacing:0.5px;
-    text-transform:uppercase;
-    line-height:1.05;
-  }
-  a{color:inherit;text-decoration:none;}
-  .container{max-width:1100px;margin:0 auto;padding:0 32px;}
-  section{padding:120px 0;position:relative;}
+:root{--bg:#08080a;--bg2:#0e0d0c;--ink:#ece6da;--mute:#8a857b;--dim:#4a4741;--gold:#c9a24a;--line:rgba(236,230,218,.12)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;font-size:17px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::after{content:"";position:fixed;inset:-50%;pointer-events:none;z-index:999;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1s steps(6) infinite}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+.mono{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+h1,h2,h3{font-family:"Instrument Serif",serif;font-weight:400;line-height:.95;letter-spacing:-.01em}
+h2{font-size:clamp(2.6rem,6vw,5rem)}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+section{padding:140px 0;position:relative}
+.slate{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:18px;margin-bottom:56px}
+.lead{color:var(--mute);max-width:620px;margin-top:22px}
 
-  /* NAV */
-  nav{
-    position:fixed;top:0;left:0;right:0;z-index:100;
-    display:flex;justify-content:space-between;align-items:center;
-    padding:22px 40px;
-    background:rgba(10,13,20,0.75);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  nav .logo{font-family:'Anton',sans-serif;font-size:1.3rem;letter-spacing:1px;}
-  nav ul{list-style:none;display:flex;gap:32px;}
-  nav a{font-size:0.85rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);transition:color .2s;}
-  nav a:hover{color:var(--cyan);}
-  .nav-toggle{display:none;background:none;border:none;color:var(--ink);font-size:1.5rem;cursor:pointer;}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:22px 40px;background:linear-gradient(var(--bg),rgba(8,8,10,0))}
+nav .logo{font-family:"Instrument Serif",serif;font-size:1.5rem}
+nav ul{list-style:none;display:flex;gap:28px}
+nav a{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);transition:color .2s}
+nav a:hover{color:var(--gold)}
+.nav-toggle{display:none;background:none;border:0;color:var(--ink);font-family:"JetBrains Mono",monospace;font-size:.75rem;letter-spacing:.2em;cursor:pointer}
 
-  /* HERO */
-  .hero{
-    min-height:100vh;
-    display:flex;flex-direction:column;justify-content:center;
-    position:relative;
-    padding-top:100px;
-  }
-  .hero::before{
-    content:"";position:absolute;inset:0;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(47,224,255,0.12), transparent 45%),
-      radial-gradient(circle at 80% 70%, rgba(255,47,126,0.12), transparent 45%);
-    pointer-events:none;
-  }
-  .hero > *{position:relative;z-index:1;}
-  .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;}
-  .hero-imgs{display:grid;gap:18px;}
-  .hero-imgs img{width:100%;display:block;border-radius:10px;border:1px solid var(--line);}
-  .hero-imgs .headshot{max-width:340px;justify-self:center;transform:rotate(1.5deg);}
-  .hero-imgs .team{transform:rotate(-1deg);}
-  @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr;gap:40px;}
-    .hero-imgs .headshot{justify-self:start;max-width:260px;}
-  }
-  .eyebrow{
-    font-size:0.85rem;font-weight:700;letter-spacing:3px;color:var(--cyan);
-    text-transform:uppercase;margin-bottom:18px;
-  }
-  .hero h1{
-    font-size:clamp(2.6rem, 7vw, 5.2rem);
-    margin-bottom:8px;
-  }
-  .hero h1 span{color:var(--magenta);}
-  .hero .role-line{
-    font-size:clamp(1.1rem,2.4vw,1.6rem);
-    color:var(--muted);
-    font-weight:500;
-    margin:18px 0 30px;
-    max-width:700px;
-  }
-  .hero .role-line strong{color:var(--ink);font-weight:700;}
-  .btn-row{display:flex;gap:18px;flex-wrap:wrap;}
-  .btn{
-    display:inline-block;padding:14px 30px;border-radius:2px;
-    font-weight:700;font-size:0.85rem;letter-spacing:1.5px;text-transform:uppercase;
-    transition:transform .2s, box-shadow .2s;
-  }
-  .btn-primary{background:var(--cyan);color:#04121a;}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(47,224,255,0.25);}
-  .btn-ghost{border:1px solid var(--line);color:var(--ink);}
-  .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);}
-  .scroll-cue{
-    position:absolute;bottom:36px;left:32px;
-    font-size:0.75rem;letter-spacing:2px;color:var(--muted);
-    text-transform:uppercase;
-  }
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(3.6rem,8.4vw,7.4rem);margin:22px 0 28px}
+.hero p{font-size:1.2rem;color:var(--mute);max-width:470px}
+.hero p strong{color:var(--ink);font-weight:500}
+.btns{display:flex;gap:28px;margin-top:40px;align-items:center}
+.btn{font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;padding:16px 28px;border:1px solid var(--gold);color:var(--bg);background:var(--gold);transition:all .25s}
+.btn:hover{background:transparent;color:var(--gold)}
+.link{font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--dim);padding-bottom:4px}
+.link:hover{border-color:var(--gold);color:var(--gold)}
+.stills{position:relative;height:620px}
+.still{position:absolute;background:#000;padding:10px 10px 34px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.still img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.05)}
+.still .mono{position:absolute;bottom:10px;left:12px;font-size:.6rem}
+.still.a{width:58%;height:66%;top:0;right:4%}
+.still.b{width:74%;height:46%;bottom:0;left:0}
 
-  /* SECTION HEADER */
-  .section-tag{
-    font-size:0.8rem;font-weight:700;letter-spacing:3px;color:var(--gold);
-    text-transform:uppercase;margin-bottom:14px;
-  }
-  .section-title{
-    font-size:clamp(1.8rem,4vw,2.8rem);
-    margin-bottom:40px;
-    max-width:720px;
-  }
+/* NUMBERS */
+#numbers{background:var(--bg2)}
+.big{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:end;margin-bottom:70px}
+.big .fig{font-family:"Instrument Serif",serif;font-size:clamp(5rem,15vw,12.5rem);line-height:.82;white-space:nowrap}
+.big .fig .arrow{color:var(--gold);font-style:italic}
+.big .cap{max-width:420px;padding-bottom:14px}
+.big .cap strong{display:block;font-family:"Instrument Serif",serif;font-weight:400;font-size:2.1rem;line-height:1.05;margin-bottom:12px}
+.big .cap p{color:var(--mute)}
+.chart{width:100%;height:auto;display:block;margin-bottom:110px}
+.chart .g{stroke:var(--line);stroke-width:1}
+.chart .ax{fill:var(--mute);font-family:"JetBrains Mono",monospace;font-size:12px;letter-spacing:.1em}
+.chart .ln{fill:none;stroke:var(--gold);stroke-width:3}
+.chart .pt{fill:var(--bg2);stroke:var(--gold);stroke-width:2}
+.chart .pt.hi{fill:var(--gold)}
+.chart .vl{fill:var(--ink);font-family:"Instrument Serif",serif;font-size:30px}
+.p4p{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.p4p h3{font-size:clamp(2.4rem,4.4vw,3.8rem);margin:18px 0 22px}
+.p4p p{color:var(--mute);margin-bottom:16px}
+.p4p p strong{color:var(--ink);font-weight:500}
+.board{list-style:none;border-top:1px solid var(--line)}
+.board li{display:grid;grid-template-columns:44px 1fr auto 90px;gap:16px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);color:var(--mute)}
+.board .rk,.board .cf{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+.board .sc{font-family:"Instrument Serif",serif;font-size:1.45rem;color:var(--ink)}
+.board .gn{text-align:right;font-family:"JetBrains Mono",monospace;font-size:.9rem}
+.board li.me{background:linear-gradient(90deg,rgba(201,162,74,.16),rgba(201,162,74,0));color:var(--gold);margin:0 -14px;padding:16px 14px}
+.board li.me .sc{color:var(--gold);font-style:italic;font-size:1.7rem}
+.board-note{margin-top:14px}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);margin-top:110px;border-top:1px solid var(--line)}
+.strip div{padding:28px 24px 0 0}
+.strip b{display:block;font-family:"Instrument Serif",serif;font-weight:400;font-size:3rem;line-height:1;margin-bottom:10px}
+.strip span{color:var(--mute);font-size:.92rem;display:block;max-width:220px}
 
-  /* ABOUT */
-  #about{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:start;}
-  .about-body p{color:var(--muted);font-size:1.05rem;margin-bottom:20px;}
-  .about-body strong{color:var(--ink);}
-  .skill-list{display:flex;flex-direction:column;gap:14px;}
-  .skill-item{
-    display:flex;align-items:center;gap:14px;
-    padding:16px 20px;background:rgba(255,255,255,0.03);
-    border:1px solid var(--line);border-radius:6px;
-  }
-  .skill-item .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);flex-shrink:0;}
-  .skill-item span{font-weight:600;font-size:0.95rem;}
+/* ABOUT */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+.about p{margin-bottom:22px;color:#cfc8ba}
+.about p strong{color:var(--ink);font-weight:600}
+.skills{list-style:none;margin-top:30px}
+.skills li{font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);padding:12px 0;border-bottom:1px solid var(--line)}
 
-  /* STATS */
-  .stat-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
-    background:var(--line);border:1px solid var(--line);
-  }
-  .stat-card{
-    background:var(--bg);padding:40px 30px;text-align:left;
-  }
-  .stat-num{
-    font-family:'Anton',sans-serif;font-size:clamp(2.2rem,4vw,3rem);
-    color:var(--cyan);line-height:1;margin-bottom:10px;
-  }
-  .stat-card:nth-child(3n-1) .stat-num{color:var(--magenta);}
-  .stat-card:nth-child(3n) .stat-num{color:var(--gold);}
-  .stat-label{color:var(--muted);font-size:0.92rem;}
+/* CLIPS */
+.clips{display:grid;grid-template-columns:1fr 1fr;gap:56px 40px}
+.clip .frame{position:relative;padding-top:56.25%;background:#000;outline:1px solid var(--line);outline-offset:10px}
+.clip iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.clip figcaption{margin-top:22px;font-family:"Instrument Serif",serif;font-size:1.4rem;display:flex;gap:16px;align-items:baseline}
+.clips .clip:first-child{grid-column:1/-1}
+.ig{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start}
+.ig .instagram-media{margin:0!important;min-width:0!important;width:100%!important}
+.vice-clips{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:70px}
+.vice-clips .clip figcaption{font-size:1.15rem}
+#vice .lead strong{color:var(--ink);font-weight:500}
 
-  /* EXPERIENCE */
-  #experience{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-  .timeline{position:relative;padding-left:30px;border-left:2px solid var(--line);}
-  .tl-item{position:relative;padding-bottom:52px;}
-  .tl-item:last-child{padding-bottom:0;}
-  .tl-item::before{
-    content:"";position:absolute;left:-37px;top:4px;
-    width:14px;height:14px;border-radius:50%;
-    background:var(--bg-alt);border:3px solid var(--cyan);
-  }
-  .tl-item.current::before{border-color:var(--magenta);}
-  .tl-role{font-size:1.25rem;font-weight:800;margin-bottom:2px;}
-  .tl-org{color:var(--cyan);font-weight:600;font-size:0.95rem;margin-bottom:2px;}
-  .tl-date{color:var(--muted);font-size:0.85rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;}
-  .tl-item ul{margin-left:20px;color:var(--muted);}
-  .tl-item li{margin-bottom:8px;font-size:0.96rem;}
-  .tl-item li strong{color:var(--ink);}
+/* PHOTO */
+.photos{columns:3;column-gap:14px}
+.photos img{width:100%;margin-bottom:14px;display:block;filter:saturate(.9)}
 
-  /* EDUCATION */
-  .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  .edu-card{
-    padding:30px;border:1px solid var(--line);border-radius:8px;
-    background:rgba(255,255,255,0.03);
-  }
-  .edu-card .deg{font-weight:800;font-size:1.1rem;margin-bottom:6px;}
-  .edu-card .school{color:var(--cyan);font-weight:600;margin-bottom:4px;}
-  .edu-card .year{color:var(--muted);font-size:0.9rem;}
+/* RESUME */
+.roles{border-top:1px solid var(--line)}
+.role{display:grid;grid-template-columns:220px 1fr;gap:40px;padding:40px 0;border-bottom:1px solid var(--line)}
+.role h3{font-size:2rem;margin-bottom:6px}
+.role .org{color:var(--gold);margin-bottom:16px}
+.role ul{list-style:none}
+.role li{color:#cfc8ba;padding-left:22px;position:relative;margin-bottom:10px;font-size:.98rem}
+.role li::before{content:"";position:absolute;left:0;top:.75em;width:10px;height:1px;background:var(--gold)}
+.role li strong{color:var(--ink);font-weight:600}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:70px}
+.edu h3{font-size:1.7rem;margin:10px 0 6px}
+.edu p{color:var(--mute)}
 
-  /* PORTFOLIO CTA */
-  #work{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;}
-  #work .section-title{margin-left:auto;margin-right:auto;}
-  .work-lead{color:var(--muted);max-width:600px;margin:0 auto 40px;}
-  .work-btns{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;}
+/* CONTACT */
+#contact{padding:180px 0 120px;text-align:center}
+#contact h2{font-size:clamp(3.4rem,9vw,8rem);margin:24px 0 48px}
+.contact-links{display:flex;justify-content:center;gap:44px;flex-wrap:wrap}
+.contact-links a{font-family:"JetBrains Mono",monospace;font-size:.82rem;letter-spacing:.14em;border-bottom:1px solid var(--dim);padding-bottom:4px}
+.contact-links a:hover{color:var(--gold);border-color:var(--gold)}
+footer{text-align:center;padding:40px 0 60px}
 
-  /* CONTACT */
-  .contact-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:40px;}
-  .contact-links{display:flex;flex-direction:column;gap:14px;}
-  .contact-links a{font-size:1.3rem;font-weight:700;}
-  .contact-links a:hover{color:var(--cyan);}
-  footer{
-    border-top:1px solid var(--line);padding:30px 0;
-    text-align:center;color:var(--muted);font-size:0.85rem;
-  }
-
-
-  /* PORTFOLIO SECTIONS */
-  .video-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  .video-card{background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:8px;overflow:hidden;}
-  .video-card .frame{position:relative;padding-top:56.25%;}
-  .video-card iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
-  .video-card .cap{padding:14px 18px;font-weight:600;font-size:0.92rem;color:var(--muted);}
-  .photo-masonry{columns:3;column-gap:14px;}
-  .photo-masonry img{width:100%;margin-bottom:14px;border-radius:6px;display:block;background:var(--bg-alt);}
-  #vice .section-tag{color:var(--magenta);}
-  .vice-lead{color:var(--muted);max-width:760px;margin-bottom:44px;font-size:1.05rem;}
-  .vice-lead strong{color:var(--ink);}
-  .vice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:50px;}
-  .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start;}
-  .ig-grid .instagram-media{margin:0 !important;min-width:0 !important;width:100% !important;}
-  @media (max-width:820px){
-    .video-grid{grid-template-columns:1fr;}
-    .photo-masonry{columns:2;}
-    .vice-grid{grid-template-columns:1fr;}
-    .ig-grid{grid-template-columns:1fr;}
-  }
-  @media (max-width:520px){ .photo-masonry{columns:1;} }
-
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
-  .reveal.in{opacity:1;transform:translateY(0);}
-
-  @media (max-width:820px){
-    nav ul{
-      position:fixed;top:68px;right:0;left:0;
-      flex-direction:column;background:var(--bg);
-      padding:20px 40px;border-bottom:1px solid var(--line);
-      transform:translateY(-150%);transition:transform .3s;gap:18px;
-    }
-    nav ul.open{transform:translateY(0);}
-    .nav-toggle{display:block;}
-    .about-grid{grid-template-columns:1fr;}
-    .stat-grid{grid-template-columns:1fr 1fr;}
-    .edu-grid{grid-template-columns:1fr;}
-    section{padding:80px 0;}
-  }
-  @media (max-width:520px){
-    .stat-grid{grid-template-columns:1fr;}
-    .container{padding:0 22px;}
-  }
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:900px){
+  .wrap{padding:0 24px} section{padding:100px 0}
+  nav{padding:18px 24px}
+  nav ul{position:fixed;top:60px;left:0;right:0;flex-direction:column;background:var(--bg);padding:24px;gap:18px;transform:translateY(-160%);transition:transform .3s}
+  nav ul.open{transform:none} .nav-toggle{display:block}
+  .hero-grid,.about,.p4p,.edu{grid-template-columns:1fr} .stills{height:480px}
+  .big{grid-template-columns:1fr;gap:24px}
+  .strip{grid-template-columns:1fr 1fr} .strip div{padding-bottom:24px}
+  .clips,.vice-clips,.ig{grid-template-columns:1fr}
+  .photos{columns:2} .role{grid-template-columns:1fr;gap:12px}
+  .board li{grid-template-columns:34px 1fr 70px} .board .cf{display:none}
+}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">HUNTER DUBOIS</div>
-  <button class="nav-toggle" id="navToggle">☰</button>
+  <a href="#top" class="logo">Hunter DuBois</a>
+  <button class="nav-toggle" id="navToggle">Menu</button>
   <ul id="navMenu">
+    <li><a href="#numbers">The Numbers</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#impact">Impact</a></li>
-    <li><a href="#quickhitters">Quick Hitters</a></li>
-    <li><a href="#video">Video</a></li>
-    <li><a href="#photo">Photo</a></li>
+    <li><a href="#video">Film</a></li>
+    <li><a href="#quickhitters">Social</a></li>
     <li><a href="#vice">VICE U</a></li>
-    <li><a href="#experience">Experience</a></li>
+    <li><a href="#photo">Photo</a></li>
+    <li><a href="#experience">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<section class="hero container">
-  <div class="hero-grid">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Miami, FL</div>
-      <h1>Creative. <span>Storyteller.</span><br>Leader.</h1>
-      <p class="role-line">A creative expert passionate about <strong>building brands</strong> and the teams that power them.</p>
-      <div class="btn-row">
-        <a href="#video" class="btn btn-primary">See the Work</a>
-        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      <div class="mono">Creative Director · Miami, FL</div>
+      <h1>Creative.<br><em>Storyteller.</em><br>Leader.</h1>
+      <p>A creative expert passionate about <strong>building brands</strong> and the teams that power them.</p>
+      <div class="btns">
+        <a href="#numbers" class="btn">See the Results</a>
+        <a href="#contact" class="link">Get in Touch</a>
       </div>
     </div>
-    <div class="hero-imgs">
-      <img class="headshot" src="headshot.jpg" alt="Hunter DuBois">
-      <img class="team" src="team.jpg" alt="The FIU creative team with the Don Shula Award trophy">
+    <div class="stills">
+      <div class="still a"><img src="headshot.jpg" alt="Hunter DuBois"><span class="mono">A001 · Hunter DuBois</span></div>
+      <div class="still b"><img src="team.jpg" alt="The FIU creative team with the Don Shula Award trophy"><span class="mono">B014 · FIU Creative, Shula Bowl</span></div>
     </div>
   </div>
-  <div class="scroll-cue">Scroll ↓</div>
+</section>
+
+<section id="numbers">
+  <div class="wrap">
+    <div class="slate reveal"><span class="mono">01 · The Numbers</span><span class="mono">FIU Football · Instagram</span></div>
+    <div class="big reveal">
+      <div class="fig">12K <span class="arrow">→</span> 66K</div>
+      <div class="cap"><strong>5.5x the audience since I took over.</strong><p>FIU Football's Instagram had about 12,000 followers when I arrived in 2022. It has 66,000 today.</p></div>
+    </div>
+    <div class="reveal"><svg viewBox="0 0 1000 420" class="chart" role="img" aria-label="FIU Football Instagram followers grew from 12,084 in 2021–22 to 66,000 today"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c9a24a" stop-opacity=".35"/><stop offset="1" stop-color="#c9a24a" stop-opacity="0"/></linearGradient></defs><line x1="60" x2="960" y1="370.0" y2="370.0" class="g"/><text x="48" y="374.0" class="ax" text-anchor="end">0K</text><line x1="60" x2="960" y1="272.9" y2="272.9" class="g"/><text x="48" y="276.9" class="ax" text-anchor="end">20K</text><line x1="60" x2="960" y1="175.7" y2="175.7" class="g"/><text x="48" y="179.7" class="ax" text-anchor="end">40K</text><line x1="60" x2="960" y1="78.6" y2="78.6" class="g"/><text x="48" y="82.6" class="ax" text-anchor="end">60K</text><path d="M60.0,311.3 L210.0,286.6 L360.0,258.7 L510.0,200.0 L660.0,132.8 L810.0,78.6 L960.0,49.4 L960.0,370 L60.0,370 Z" fill="url(#fill)"/><path d="M60.0,311.3 L210.0,286.6 L360.0,258.7 L510.0,200.0 L660.0,132.8 L810.0,78.6 L960.0,49.4" class="ln"/><circle cx="60.0" cy="311.3" r="7" class="pt hi"/><text x="60.0" y="398" class="ax" text-anchor="middle">21–22</text><text x="60.0" y="293.3" class="vl" text-anchor="middle">12K</text><circle cx="210.0" cy="286.6" r="4" class="pt"/><text x="210.0" y="398" class="ax" text-anchor="middle">22–23</text><circle cx="360.0" cy="258.7" r="4" class="pt"/><text x="360.0" y="398" class="ax" text-anchor="middle">23–24</text><circle cx="510.0" cy="200.0" r="4" class="pt"/><text x="510.0" y="398" class="ax" text-anchor="middle">24–25</text><circle cx="660.0" cy="132.8" r="4" class="pt"/><text x="660.0" y="398" class="ax" text-anchor="middle">25–26</text><circle cx="810.0" cy="78.6" r="4" class="pt"/><text x="810.0" y="398" class="ax" text-anchor="middle">AUG '26</text><circle cx="960.0" cy="49.4" r="7" class="pt hi"/><text x="960.0" y="398" class="ax" text-anchor="middle">NOW</text><text x="960.0" y="31.4" class="vl" text-anchor="middle">66K</text></svg></div>
+
+    <div class="p4p">
+      <div class="reveal">
+        <div class="mono">Pound for Pound</div>
+        <h3>A Conference USA program, gaining <em>like the Big Ten.</em></h3>
+        <p>In 2026, FIU added more Instagram followers than Iowa and Michigan State. It was <strong>the only Group of Five program in the national top 10</strong> for total follower gains.</p>
+        <p>By growth rate, FIU ranked <strong>#3 in the country</strong> (+23.7%), behind only Indiana and Kent State. That follows back-to-back top 10 finishes nationally in 2024–25 and 2025–26.</p>
+      </div>
+      <div class="reveal">
+        <ul class="board"><li class=""><span class="rk">01</span><span class="sc">Indiana</span><span class="cf">Big Ten</span><span class="gn">+95.3K</span></li><li class=""><span class="rk">02</span><span class="sc">Miami</span><span class="cf">ACC</span><span class="gn">+40.8K</span></li><li class=""><span class="rk">03</span><span class="sc">USC</span><span class="cf">Big Ten</span><span class="gn">+22.4K</span></li><li class=""><span class="rk">04</span><span class="sc">Ohio State</span><span class="cf">Big Ten</span><span class="gn">+14.6K</span></li><li class=""><span class="rk">05</span><span class="sc">Ole Miss</span><span class="cf">SEC</span><span class="gn">+12.6K</span></li><li class=""><span class="rk">06</span><span class="sc">UCLA</span><span class="cf">Big Ten</span><span class="gn">+12.2K</span></li><li class=""><span class="rk">07</span><span class="sc">Notre Dame</span><span class="cf">Independent</span><span class="gn">+11.8K</span></li><li class="me"><span class="rk">08</span><span class="sc">FIU</span><span class="cf">Conference USA</span><span class="gn">+11.6K</span></li><li class=""><span class="rk">09</span><span class="sc">Iowa</span><span class="cf">Big Ten</span><span class="gn">+11K</span></li><li class=""><span class="rk">10</span><span class="sc">Michigan State</span><span class="cf">Big Ten</span><span class="gn">+10.3K</span></li></ul>
+        <div class="mono board-note">Total IG follower gains, 2026 · National rankings of 138 schools</div>
+      </div>
+    </div>
+
+    <div class="strip reveal">
+      <div><b>108 → 10</b><span>National rank in IG growth rate, 2021–22 to 2025–26</span></div>
+      <div><b>56.4M</b><span>Instagram views in the 2025 season</span></div>
+      <div><b>#1</b><span>IG growth in Florida, 2024–25 (+52.7%), ahead of Miami, UF and FSU</span></div>
+      <div><b>32%</b><span>Of all Conference USA football IG engagement, 2026 offseason</span></div>
+    </div>
+  </div>
 </section>
 
 <section id="about">
-  <div class="container about-grid">
-    <div class="about-body reveal">
-      <div class="section-tag">About</div>
-      <h2 class="section-title">Who I Am</h2>
-      <p>I'm Hunter DuBois, a creative director and storyteller based in Miami, FL. At Florida International University, I get to lead the creative vision for all 17 varsity athletic programs alongside a team we built from the ground up.</p>
-      <p>I've spent my career learning every part of the process, from shooting and editing to design and social strategy. I pride myself on being a multifaceted creative, with videography as my biggest passion. But more than anything, I take pride in being a leader who pushes others to become the best versions of themselves.</p>
-      <p>Together we turned <strong>VICE U</strong> from a concept into a nationally recognized campaign and took FIU Football's Instagram from <strong>108th nationally to Top 10</strong> in back-to-back seasons. I'm proud of those numbers, but I'm proudest of the people behind them, and of building a place where young creatives grow into professionals.</p>
-    </div>
-    <div class="skill-list reveal">
-      <div class="skill-item"><div class="dot"></div><span>Photography</span></div>
-      <div class="skill-item"><div class="dot"></div><span>Videography &amp; Editing</span></div>
-      <div class="skill-item"><div class="dot"></div><span>Social Media Strategy &amp; Management</span></div>
-      <div class="skill-item"><div class="dot"></div><span>Graphic Design</span></div>
-      <div class="skill-item"><div class="dot"></div><span>Team Leadership &amp; Mentorship</span></div>
-      <div class="skill-item"><div class="dot"></div><span>Brand Building &amp; Campaign Strategy</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="impact">
-  <div class="container">
-    <div class="section-tag reveal">Impact</div>
-    <h2 class="section-title reveal">Measurable Growth, National Impact</h2>
-  </div>
-  <div class="container">
-    <div class="stat-grid reveal">
-      <div class="stat-card"><div class="stat-num">Top 10</div><div class="stat-label">National Instagram growth rate, back-to-back seasons (2024–25, 2025–26) among 134 FBS programs</div></div>
-      <div class="stat-card"><div class="stat-num">108 → 10</div><div class="stat-label">FIU Football IG growth-rate ranking climb: 108th (2021–22) to Top 10 (2025–26)</div></div>
-      <div class="stat-card"><div class="stat-num">56.4M+</div><div class="stat-label">Total Instagram views generated during the 2025 season</div></div>
-      <div class="stat-card"><div class="stat-num">10.6M+</div><div class="stat-label">Total X (Twitter) views generated during the 2025 season</div></div>
-      <div class="stat-card"><div class="stat-num">+52.7%</div><div class="stat-label">Instagram growth rate in 2024–25 — highest in Conference USA and the entire state of Florida, ahead of Miami, UF &amp; FSU</div></div>
-      <div class="stat-card"><div class="stat-num">5X</div><div class="stat-label">Instagram follower growth — 12K in 2022 to 60K+ today</div></div>
-      <div class="stat-card"><div class="stat-num">71.5K</div><div class="stat-label">X followers, +41.3% growth since 2022 — #21 nationally among FBS programs</div></div>
-      <div class="stat-card"><div class="stat-num">4.04M+</div><div class="stat-label">Views generated by VICE U across the 2023–24 campaigns, plus 200K+ interactions</div></div>
-      <div class="stat-card"><div class="stat-num">1.54M / 1.38M</div><div class="stat-label">IG / X views on the 2024 VICE U uniform reveal alone</div></div>
-      <div class="stat-card"><div class="stat-num">#3</div><div class="stat-label">In the nation in Instagram follower growth rate in 2026 (+23.7%, of 138 FBS programs), and #8 in total follower gains</div></div>
-      <div class="stat-card"><div class="stat-num">32%</div><div class="stat-label">Of ALL Conference USA football Instagram engagement in 2026 — 351,473 likes, 210K more than the next school</div></div>
-      <div class="stat-card"><div class="stat-num">8 of 10</div><div class="stat-label">CUSA posts with 10K+ likes in the 2026 offseason were FIU’s — more than every other school combined</div></div>
+  <div class="wrap">
+    <div class="slate reveal"><span class="mono">02 · About</span><span class="mono">Miami, FL</span></div>
+    <div class="about">
+      <div class="reveal">
+        <h2>Who <em>I am.</em></h2>
+        <ul class="skills">
+          <li>Videography &amp; Editing</li><li>Photography</li><li>Social Strategy</li><li>Graphic Design</li><li>Brand &amp; Campaigns</li><li>Team Leadership</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <p>I'm Hunter DuBois, a creative director and storyteller based in Miami, FL. At Florida International University, I get to lead the creative vision for all 17 varsity athletic programs alongside a team we built from the ground up.</p>
+        <p>I've spent my career learning every part of the process, from shooting and editing to design and social strategy. I pride myself on being a multifaceted creative, with videography as my biggest passion. But more than anything, I take pride in being a leader who pushes others to become the best versions of themselves.</p>
+        <p>Together we turned <strong>VICE U</strong> from a concept into a nationally recognized campaign and took FIU Football's Instagram from <strong>12K to 66K followers</strong>. I'm proud of those numbers, but I'm proudest of the people behind them, and of building a place where young creatives grow into professionals.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="quickhitters" style="background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-  <div class="container">
-    <div class="section-tag reveal">Quick Hitters</div>
-    <h2 class="section-title reveal">Straight From the Feed</h2>
-    <p class="work-lead reveal" style="margin:0 0 40px;text-align:left;">Short-form content that keeps FIU in the conversation.</p>
-    <div class="ig-grid reveal">
+<section id="video">
+  <div class="wrap">
+    <div class="slate reveal"><span class="mono">03 · Film</span><span class="mono">Shot, edited and directed by Hunter</span></div>
+    <h2 class="reveal" style="margin-bottom:70px">Cinematic <em>storytelling.</em></h2>
+    <div class="clips">
+      <figure class="clip reveal">
+        <div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/TxDRIgCdC8Y" title="FIU Football Intro, 2025" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption><span class="mono">01</span>FIU Football Intro, 2025</figcaption>
+      </figure>
+      <figure class="clip reveal">
+        <div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/_V7n5jOt9R4" title="FIU vs FAU, Cinematic Recap" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption><span class="mono">02</span>FIU vs FAU, Cinematic Recap</figcaption>
+      </figure>
+      <figure class="clip reveal">
+        <div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/8yJaGVMnEic" title="FIU vs WKU, Cinematic Recap" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption><span class="mono">03</span>FIU vs WKU, Cinematic Recap</figcaption>
+      </figure>
+      <figure class="clip reveal">
+        <div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/YTFgrO-HiRs" title="Uncaged, Episode 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption><span class="mono">04</span>Uncaged, Episode 1</figcaption>
+      </figure>
+      <figure class="clip reveal">
+        <div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/ZN0yepx7g60" title="FIU Football Intro, 2024" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption><span class="mono">05</span>FIU Football Intro, 2024</figcaption>
+      </figure>
+      <figure class="clip reveal">
+        <div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/94u0awO8mhI" title="FIU vs CMU, Cinematic Recap" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption><span class="mono">06</span>FIU vs CMU, Cinematic Recap</figcaption>
+      </figure>
+      <figure class="clip reveal">
+        <div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/5VuxDLpEMp0" title="#LifeInThe305, Ep. 7 with Brian Blades" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption><span class="mono">07</span>#LifeInThe305, Ep. 7 with Brian Blades</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="quickhitters" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="slate reveal"><span class="mono">04 · Social</span><span class="mono">Straight from the feed</span></div>
+    <h2 class="reveal">Quick <em>hitters.</em></h2>
+    <p class="lead reveal" style="margin-bottom:60px">Short-form content that keeps FIU in the conversation.</p>
+    <div class="ig reveal">
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DWct6yPEViv/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DWct6yPEViv/">View on Instagram</a></blockquote>
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DWC4rNrkTIE/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DWC4rNrkTIE/">View on Instagram</a></blockquote>
       <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DSnRkJiEVKz/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DSnRkJiEVKz/">View on Instagram</a></blockquote>
@@ -335,29 +281,38 @@
   </div>
 </section>
 
-<section id="video">
-  <div class="container">
-    <div class="section-tag reveal">Video</div>
-    <h2 class="section-title reveal">Cinematic Storytelling</h2>
-    <p class="work-lead reveal" style="margin:0 0 40px;text-align:left;">Intro videos, cinematic recaps, and docuseries. Shot, edited, and directed by me.</p>
-    <div class="video-grid">
-      <div class="video-card reveal"><div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/TxDRIgCdC8Y" title="FIU Football Intro Video 2025" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="cap">FIU Football Intro Video 2025</div></div>
-      <div class="video-card reveal"><div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/_V7n5jOt9R4" title="2025 FIU vs FAU — Cinematic Recap" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="cap">2025 FIU vs FAU — Cinematic Recap</div></div>
-      <div class="video-card reveal"><div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/8yJaGVMnEic" title="2025 FIU vs WKU — Cinematic Recap" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="cap">2025 FIU vs WKU — Cinematic Recap</div></div>
-      <div class="video-card reveal"><div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/YTFgrO-HiRs" title="Uncaged — Ep. 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="cap">Uncaged — Ep. 1</div></div>
-      <div class="video-card reveal"><div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/ZN0yepx7g60" title="FIU Football 2024 Intro Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="cap">FIU Football 2024 Intro Video</div></div>
-      <div class="video-card reveal"><div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/94u0awO8mhI" title="2024 FIU vs CMU — Cinematic Recap" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="cap">2024 FIU vs CMU — Cinematic Recap</div></div>
-      <div class="video-card reveal"><div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/5VuxDLpEMp0" title="#LifeInThe305 Ep. 7 w/ Brian Blades" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="cap">#LifeInThe305 Ep. 7 w/ Brian Blades</div></div>
+<section id="vice">
+  <div class="wrap">
+    <div class="slate reveal"><span class="mono">05 · VICE U</span><span class="mono">Campaign, 2023–present</span></div>
+    <h2 class="reveal">The campaign that <em>changed everything.</em></h2>
+    <p class="lead reveal" style="margin-bottom:70px">I created <strong>VICE U</strong>, FIU Football's signature brand campaign, built on Miami Vice energy to make a hometown program impossible to ignore. The 2023 and 2024 campaigns alone generated <strong>4.04M+ views and 200K+ interactions</strong>.</p>
+    <div class="vice-clips">
+      <figure class="clip reveal">
+        <div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/YUm4a_9vyX4" title="VICE U Uniform Release, 2025" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption><span class="mono">01</span>VICE U Uniform Release, 2025</figcaption>
+      </figure>
+      <figure class="clip reveal">
+        <div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/JDCrDxFIGdM" title="#VICEU Uniform Reveal, 2024" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption><span class="mono">02</span>#VICEU Uniform Reveal, 2024</figcaption>
+      </figure>
+      <figure class="clip reveal">
+        <div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/e9RGtJ3pJnY" title="Vice Night Uniform Reveal, 2023" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <figcaption><span class="mono">03</span>Vice Night Uniform Reveal, 2023</figcaption>
+      </figure>
+    </div>
+    <div class="ig reveal">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CyPKCBjM4cD/" data-instgrm-version="14"><a href="https://www.instagram.com/p/CyPKCBjM4cD/">View on Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DBaBEYCtiwt/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DBaBEYCtiwt/">View on Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DAqVOt1RuBd/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DAqVOt1RuBd/">View on Instagram</a></blockquote>
     </div>
   </div>
 </section>
 
-<section id="photo" style="background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-  <div class="container">
-    <div class="section-tag reveal">Photo</div>
-    <h2 class="section-title reveal">Shot by Hunter</h2>
-    <p class="work-lead reveal" style="margin:0 0 40px;text-align:left;">Game action, portraits, and brand shoots across all 17 FIU programs — and beyond.</p>
-    <div class="photo-masonry">
+<section id="photo" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="slate reveal"><span class="mono">06 · Photo</span><span class="mono">All 17 FIU programs</span></div>
+    <h2 class="reveal" style="margin-bottom:60px">Shot by <em>Hunter.</em></h2>
+    <div class="photos">
       <img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/679439c25954e17e0a7033f9/e669a39d-9582-495a-bd4f-724d8bb48986/DSC08248.jpg?format=800w" alt="FIU Athletics photography by Hunter DuBois">
       <img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/679439c25954e17e0a7033f9/b4909a0d-115b-4ac9-8a60-2f84fd7d4c58/cube_pix__382.jpg?format=800w" alt="FIU Athletics photography by Hunter DuBois">
       <img loading="lazy" src="https://images.squarespace-cdn.com/content/v1/679439c25954e17e0a7033f9/e2954e21-3e17-4e45-a8ef-d21cfbb69954/DSC08436_Enhanced_NR.jpg?format=800w" alt="FIU Athletics photography by Hunter DuBois">
@@ -409,116 +364,41 @@
   </div>
 </section>
 
-<section id="vice">
-  <div class="container">
-    <div class="section-tag reveal">VICE U</div>
-    <h2 class="section-title reveal">The Campaign That Changed Everything</h2>
-    <p class="vice-lead reveal">I created <strong>VICE U</strong> — FIU Football’s signature brand campaign, born from Miami Vice energy and built to make a hometown program impossible to ignore. Three seasons of uniform reveals, docuseries, and content drops later, it’s generated <strong>4.04M+ views and 200K+ interactions</strong> and redefined how South Florida sees FIU Football.</p>
-    <div class="vice-grid">
-      <div class="video-card reveal"><div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/YUm4a_9vyX4" title="2025 VICE U Uniform Release" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="cap">2025 VICE U Uniform Release</div></div>
-      <div class="video-card reveal"><div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/JDCrDxFIGdM" title="2024 #VICEU Uniform Reveal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="cap">2024 #VICEU Uniform Reveal</div></div>
-      <div class="video-card reveal"><div class="frame"><iframe loading="lazy" src="https://www.youtube.com/embed/e9RGtJ3pJnY" title="2023 Vice Night Uniform Reveal" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><div class="cap">2023 Vice Night Uniform Reveal</div></div>
-    </div>
-    <div class="ig-grid reveal">
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CyPKCBjM4cD/" data-instgrm-version="14"><a href="https://www.instagram.com/p/CyPKCBjM4cD/">View on Instagram</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DBaBEYCtiwt/" data-instgrm-version="14"><a href="https://www.instagram.com/p/DBaBEYCtiwt/">View on Instagram</a></blockquote>
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DAqVOt1RuBd/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DAqVOt1RuBd/">View on Instagram</a></blockquote>
-    </div>
-  </div>
-</section>
-
-
 <section id="experience">
-  <div class="container">
-    <div class="section-tag reveal">Experience</div>
-    <h2 class="section-title reveal">Track Record</h2>
-    <div class="timeline">
-
-      <div class="tl-item current reveal">
-        <div class="tl-role">Assistant A.D. of Creative Content</div>
-        <div class="tl-org">Florida International University (FIU)</div>
-        <div class="tl-date">April 2025 – Present</div>
-        <ul>
-          <li>Oversee creative strategy and brand advancement for all <strong>17 varsity athletic programs</strong>, elevating coverage, storytelling, and content output across FIU Athletics.</li>
-          <li>Act as lead videographer while hands-on across photography, graphic design, and social content for games, practices, recruiting, and seasonal campaigns.</li>
-          <li>Continue advancing VICE U and FIU Athletics brand identities, directing high-impact campaigns that amplify national relevance and fan engagement.</li>
-          <li>Manage and mentor a full-time creative staff and large student-intern program, positioning FIU as one of the top creative departments in the Group of Five.</li>
-        </ul>
-      </div>
-
-      <div class="tl-item reveal">
-        <div class="tl-role">Social Media Specialist</div>
-        <div class="tl-org">Florida International University (FIU)</div>
-        <div class="tl-date">August 2022 – April 2025</div>
-        <ul>
-          <li>Creative director and architect behind FIU Football's modern brand identity, including the creation of <strong>VICE U</strong> — 4.04M+ views and 200K+ interactions across 2023–24.</li>
-          <li>Founded FIU's creative team from the ground up, recruiting and developing student talent, several of whom advanced into full-time creative roles.</li>
-          <li>Built the department's first comprehensive creative operation — workflows, brand standards, content strategy, and production infrastructure for all sports.</li>
-          <li>Spearheaded IG growth-rate ranking from 108th (2021) to 29th (2022), 26th (2023), and Top 10 (2025) — with followers up nearly <strong>5x since 2022</strong> (12K → 60K+).</li>
-        </ul>
-      </div>
-
-      <div class="tl-item reveal">
-        <div class="tl-role">Athletic Communications Specialist</div>
-        <div class="tl-org">Barry University</div>
-        <div class="tl-date">August 2021 – July 2022</div>
-        <ul>
-          <li>Created all content for varsity athletic teams across the department, boosting engagement and visibility university-wide.</li>
-          <li>Oversaw social media for the entire athletics department, building a large student intern staff.</li>
-          <li>Managed communications for Men's Basketball, Softball, and other Olympic sports.</li>
-        </ul>
-      </div>
-
-      <div class="tl-item reveal">
-        <div class="tl-role">Graduate Assistant, Sports Information</div>
-        <div class="tl-org">Barry University</div>
-        <div class="tl-date">August 2018 – July 2021</div>
-        <ul>
-          <li>Managed social media and sports information efforts for all Olympic sports.</li>
-          <li>Worked closely with student-athletes, coaches, and media to craft compelling narratives and news coverage.</li>
-        </ul>
-      </div>
-
-      <div class="tl-item reveal">
-        <div class="tl-role">Communications Assistant</div>
-        <div class="tl-org">University of Central Florida</div>
-        <div class="tl-date">August 2017 – July 2018</div>
-        <ul>
-          <li>Assisted with statistics and athletics website management as a public relations assistant.</li>
-          <li>Supported the 2017 UCF football team that went 13–0 and defeated Auburn in the Peach Bowl.</li>
-        </ul>
-      </div>
-
+  <div class="wrap">
+    <div class="slate reveal"><span class="mono">07 · Resume</span><span class="mono">2017–present</span></div>
+    <h2 class="reveal" style="margin-bottom:60px">Track <em>record.</em></h2>
+    <div class="roles">
+      <div class="role reveal"><div class="mono">Apr 2025 – Present</div><div><h3>Assistant A.D. of Creative Content</h3><div class="org">Florida International University</div><ul>
+        <li>Oversee creative strategy and brand advancement for all <strong>17 varsity athletic programs</strong>.</li>
+        <li>Lead videographer, while hands-on across photography, graphic design, and social for games, practices, recruiting, and campaigns.</li>
+        <li>Direct VICE U and FIU Athletics brand campaigns.</li>
+        <li>Manage and mentor a full-time creative staff and a student program of up to 20.</li></ul></div></div>
+      <div class="role reveal"><div class="mono">Aug 2022 – Apr 2025</div><div><h3>Social Media Specialist</h3><div class="org">Florida International University</div><ul>
+        <li>Created <strong>VICE U</strong> and built FIU Football's modern brand identity.</li>
+        <li>Founded FIU's creative team from the ground up; several students advanced into full-time creative roles.</li>
+        <li>Built the department's first creative operation: workflows, brand standards, content strategy, and production infrastructure.</li>
+        <li>Took FIU Football's IG growth-rate rank from 108th to top 10 nationally, and followers from <strong>12K to 66K</strong>.</li></ul></div></div>
+      <div class="role reveal"><div class="mono">Aug 2021 – Jul 2022</div><div><h3>Athletic Communications Specialist</h3><div class="org">Barry University</div><ul>
+        <li>Created content for every varsity program and ran social for the full department with a student intern staff.</li>
+        <li>Managed communications for Men's Basketball, Softball, and Olympic sports.</li></ul></div></div>
+      <div class="role reveal"><div class="mono">Aug 2018 – Jul 2021</div><div><h3>Graduate Assistant, Sports Information</h3><div class="org">Barry University</div><ul>
+        <li>Managed social media and sports information for all Olympic sports.</li></ul></div></div>
+      <div class="role reveal"><div class="mono">Aug 2017 – Jul 2018</div><div><h3>Communications Assistant</h3><div class="org">University of Central Florida</div><ul>
+        <li>Supported statistics, web, and PR for the 2017 UCF football team that finished 13–0.</li></ul></div></div>
     </div>
-  </div>
-</section>
-
-<section id="education">
-  <div class="container">
-    <div class="section-tag reveal">Education</div>
-    <h2 class="section-title reveal">Academic Background</h2>
-    <div class="edu-grid reveal">
-      <div class="edu-card">
-        <div class="deg">Graduate Studies, Business Administration &amp; Sports Management</div>
-        <div class="school">Barry University</div>
-        <div class="year">2018–2021</div>
-      </div>
-      <div class="edu-card">
-        <div class="deg">B.S. in Human Communications</div>
-        <div class="school">University of Central Florida</div>
-        <div class="year">2018</div>
-      </div>
+    <div class="edu reveal">
+      <div><div class="mono">2018–2021</div><h3>Graduate Studies, Business Administration &amp; Sports Management</h3><p>Barry University</p></div>
+      <div><div class="mono">2018</div><h3>B.S. in Human Communications</h3><p>University of Central Florida</p></div>
     </div>
   </div>
 </section>
 
 <section id="contact">
-  <div class="container contact-grid">
-    <div class="reveal">
-      <div class="section-tag">Contact</div>
-      <h2 class="section-title" style="margin-bottom:20px;">Let's Build Something.</h2>
-    </div>
-    <div class="contact-links reveal">
+  <div class="wrap reveal">
+    <div class="mono">08 · Contact</div>
+    <h2>Let's build <em>something.</em></h2>
+    <div class="contact-links">
       <a href="mailto:Lovecourtvisuals@gmail.com">Lovecourtvisuals@gmail.com</a>
       <a href="tel:7726781934">772-678-1934</a>
       <a href="https://instagram.com/Hunter_DuBois" target="_blank" rel="noopener">@Hunter_DuBois</a>
@@ -526,30 +406,16 @@
   </div>
 </section>
 
-<footer>
-  © <span id="year"></span> Hunter DuBois. Miami, FL.
-</footer>
+<footer class="mono">© <span id="year"></span> Hunter DuBois · Miami, FL</footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  const toggle = document.getElementById('navToggle');
-  const menu = document.getElementById('navMenu');
-  toggle.addEventListener('click', () => menu.classList.toggle('open'));
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
-
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if(e.isIntersecting){
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
-    });
-  }, {threshold:0.05, rootMargin:'150px 0px 150px 0px'});
-  revealEls.forEach(el => io.observe(el));
+document.getElementById('year').textContent=new Date().getFullYear();
+const t=document.getElementById('navToggle'),m=document.getElementById('navMenu');
+t.addEventListener('click',()=>m.classList.toggle('open'));
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>m.classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.05,rootMargin:'150px 0px 150px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
-
 <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
